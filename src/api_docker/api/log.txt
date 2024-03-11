@@ -1,0 +1,44 @@
+GET /posts:
+
+Retorna todos los posts.
+Método: GET
+Ruta: /posts
+Respuestas:
+200 OK: Listado de posts (JSON array)
+404 Not Found: Si no hay posts.
+GET /posts/:postId:
+
+Retorna un post específico por su ID.
+Método: GET
+Ruta: /posts/:postId
+Parámetros: postId (ID del post)
+Respuestas:
+200 OK: Detalles del post (JSON object)
+404 Not Found: Si el post no existe.
+POST /posts:
+
+Crea un nuevo post.
+Método: POST
+Ruta: /posts
+Cuerpo: Título y contenido del post (JSON)
+Respuesta:
+200 OK: Post recién creado (JSON object)
+PUT /posts/:postId:
+
+Modifica un post existente.
+Método: PUT
+Ruta: /posts/:postId
+Parámetros: postId (ID del post a modificar)
+Cuerpo: Nuevos datos del post (JSON)
+Respuestas:
+200 OK: Post editado (JSON object)
+404 Not Found: Si el post no existe.
+DELETE /posts/:postId:
+
+Borra un post por su ID.
+Método: DELETE
+Ruta: /posts/:postId
+Parámetros: postId (ID del post a borrar)
+Respuestas:
+204 No Content: Éxito (sin contenido)
+404 Not Found: Si el post no existe.
